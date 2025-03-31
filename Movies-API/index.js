@@ -14,27 +14,29 @@ function writeFile(data) {
 }
 
 app.get("/movie", (req, res) => {
-    const movie = readFile();
-    res.json(movie);
+    try {
+        const movie = readFile();
+        res.json(movie);
+    } catch (err) {
+        res.status(500).json({ error: `Inernal Server Error: ${err}` });
+    }
 });
 
 app.post("/movie", (req, res) => {
-    const movie = readFile();
-    const { Title, Year } = req.body
+    try {
+        const movie = readFile();
+        const { Title, Year } = req.body
 
-    if (Title && Year) {
-        const newMovie = {
-            id: movie.length + 1,
-            Title: Title,
-            Year: Year
+        if (!(Title && Year)) {
+            return res.status(400).json({ error: "Title und Year sind Pflichtfelder" });
         }
-        movie.push(newMovie)
-        writeFile(movie)
-        res.status(201).json(newMovie)
+
+        const nameTaken = movie.find((movie) => movie.Title == Title && movie.Year)
+        if (nameTaken) {
+            return res.status(400).json({ error: "Es gibt bereits ein Movie mit diesem Title und Year!" });
+        }
     }
-    else {
-        res.send("Daten unvollständig")
-    }
+
 });
 
 app.put("/movie/:id", (req, res) => {
