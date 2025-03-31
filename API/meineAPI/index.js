@@ -26,7 +26,7 @@ app.get("/randomname", (req, res) => {
 });
 
 app.get("/joke", (req, res) => {
-    giveMeAJoke.getRandomCNJoke(function (joke) {
+    giveMeAJoke.getRandomDadJoke(function (joke) {
         res.send(joke);
     });
 });

@@ -1,18 +1,17 @@
 {
-  "name": "myfirstexpressapp",
+  "name": "tierheim-express-api",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "express": "^4.21.2",
-    "give-me-a-joke": "^0.5.1",
-    "sillyname": "^0.1.0"
-  },
-  "description": ""
+    "nodemon": "^3.1.9"
+  }
 }
