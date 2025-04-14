@@ -6,13 +6,13 @@ const db = new sqlite3.Database(":memory:") // Erstellt eine SQLite-Datenbank im
 
 db.serialize(() => { // Führt alle Datenbankbefehle in Reihenfolge aus
 
-    db.run(`CREATE TABLE plants ( // Erstellt die Tabelle 'plant' mit den folgenden Spalten
+    db.run(`CREATE TABLE plants  // Erstellt die Tabelle 'plants' mit den folgenden Spalten
         id INTEGER PRIMARY KEY, // Eindeutige ID für jede Pflanze
         plant_name VARCHAR(80), // Pflanzenname (z. B. "Rose")
         species VARCHAR(40), // Spezies (z. B. "Rosa")
         family VARCHAR(30), // Familie (z. B. "Rosaceae")
         origin VARCHAR(50), // Herkunft (z. B. "Asien")
-        growth_form VARCHAR(60) // Wuchsform (z. B. "Busch", "Kletterpflanze")
+        growth_form VARCHAR(60) // Wuchsform (z. B. "Busch", "Kletterpflanze"
         );`)
 
     selectAllPlantsQuery = `SELECT * FROM plants` // ❌ FEHLER: falscher Tabellenname ("pflanzen" statt "plant")

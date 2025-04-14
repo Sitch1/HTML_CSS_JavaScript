@@ -6,12 +6,18 @@ const db = new sqlite3.Database(":memory:") // Erstellt eine In-Memory SQLite-Da
 
 db.serialize(() => { // Führt alle DB-Befehle in Reihenfolge nacheinander aus
     db.run(`CREATE TABLE tiere ( 
-    id INTEGER PRIMARY KEY,               // Primärschlüssel (automatisch hochzählend)
-    tierart VARCHAR(50),                  // Tierart, z. B. "Hund"
-    name VARCHAR(50),                     // Name des Tieres
-    krankheit VARCHAR(100),              // Krankheit (z. B. "Husten")
-    age INT,                              // Alter des Tieres (Ganzzahl)
-    gewicht REAL);`)                      // Gewicht (Kommazahl)
+    id INTEGER PRIMARY KEY,               
+    tierart VARCHAR(50),                  
+    name VARCHAR(50),                     
+    krankheit VARCHAR(100),              
+    age INT,                              
+    gewicht REAL);`)
+    // Primärschlüssel (automatisch hochzählend) 
+    // Tierart, z. B. "Hund"
+    // Name des Tieres  
+    // Krankheit (z. B. "Husten")  
+    // Alter des Tieres (Ganzzahl)               
+    // Gewicht (Kommazahl)
 
     // db.run(`INSERT INTO tiere(...)`)   // Beispiel für einen Insert-Befehl (auskommentiert)
 
