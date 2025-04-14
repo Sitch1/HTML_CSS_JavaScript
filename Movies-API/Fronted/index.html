@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Movie verwalten</h1>
+    <div>
+        <input type="text" id="searchInput" placeholder="Search Movie">
+        <button type="button" id="searchButton">Search</button>
+    </div>
+    <div>
+        <input type="text" id="createInputTitle" placeholder="New Movie Title">
+        <input type="text" id="createInputYear" placeholder="Movie Year">
+        <input type="number" id="number" placeholder="ID">
+        <select id="method" name="Methode">
+            <option value="create">create Movie</option>
+            <option value="change">Change Movie</option>
+        </select>
+        <button type="button" id="submitButton">Invest</button>
+    </div>
+    <div>
+        <input type="number" id="deleteId" placeholder="Delete Movie with ID">
+        <button type="button" id="deleteButton">Delete</button>
+    </div>
+
+    <div>
+        <p id="answer"></p>
+        <ul id="list"></ul>
+    </div>
+</body>
+
+</html>
