@@ -1,0 +1,15 @@
+.animalsProfileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animalsProfileBackroundImg {
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg");
+    height: 50vh;
+    /* Dynamische Höhe */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}

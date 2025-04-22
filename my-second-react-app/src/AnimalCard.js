@@ -6,20 +6,26 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function AnimalCard() {
+type AnimalCardProps = {
+    title: string;
+    image: string;
+    description: string;
+};
+
+export default function AnimalCard({ title, image, description }: AnimalCardProps) {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
                 sx={{ height: 140 }}
-                image="https://media.os.fressnapf.com/cms/2021/05/gruener_leguan_1200x527.jpg"
-                title="green iguana"
+                image={image}
+                title={title}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    {title}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    Die Leguane bilden eine Familie der Schuppenkriechtiere. Sie kommen auf dem amerikanischen Doppelkontinent vom Süden der USA bis nach Paraguay, auf den Karibischen Inseln, den Galápagos-Inseln und den Fidschi-Inseln vor.
+                    {description}
                 </Typography>
             </CardContent>
             <CardActions>
