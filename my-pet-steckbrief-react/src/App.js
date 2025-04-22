@@ -1,12 +1,12 @@
-import React from 'react';
-import Title from './title';
+// import React from 'react';
+// import Title from './title';
 
-function App() {
-  return (
-    <div>
-      <Title />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Title />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
