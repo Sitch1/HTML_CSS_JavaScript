@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="AnimalCardContainer">
             {animals.slice().map((animal) =>
-                <AnimalCard key={animal.Id} Name={animal.Name} Art={animal.Art} image={animal.image}> </AnimalCard>)}
+                <AnimalCard key={animal.Id} Id={animal.Id} Name={animal.Name} Art={animal.Art} image={animal.image}> </AnimalCard>)}
         </div>
     );
 }
