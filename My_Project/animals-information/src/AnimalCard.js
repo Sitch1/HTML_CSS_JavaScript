@@ -10,7 +10,7 @@ function AnimalCard(props) {
             <h2>{props.Name}</h2>
             <h2>Art: {props.Art}</h2>
             <button id="learnMoreButton"
-                onClick={() => navigate("/AnimalsProfile")}>LEARN MORE</button>
+                onClick={() => navigate(`/AnimalsProfile/${props.Id}`)}>LEARN MORE</button>
 
         </div>
     )
