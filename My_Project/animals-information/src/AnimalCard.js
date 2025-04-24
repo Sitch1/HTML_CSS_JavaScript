@@ -11,6 +11,11 @@ function AnimalCard(props) {
             <h2>Art: {props.Art}</h2>
             <button id="learnMoreButton"
                 onClick={() => navigate(`/AnimalsProfile/${props.Id}`)}>LEARN MORE</button>
+            <button id='soundButton'
+                onClick={() => {
+                    const sound = new Audio("/img/HundeBällen.mp3");
+                    sound.play();
+                }}>▶️</button>
 
         </div>
     )

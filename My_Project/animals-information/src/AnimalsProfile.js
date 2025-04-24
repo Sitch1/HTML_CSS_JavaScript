@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import "./AnimalsProfile.css";
 import AnimalsProfileCard from './AnimalsProfileCard';
+import { useEffect } from 'react';
 
 
 const animalsInfo = [
@@ -18,8 +19,16 @@ const animalsInfo = [
         image: "https://currumbinvetservices.com.au/wp-content/uploads/2023/02/budgerigars.jpg.webp"
     }
 ];
-function AnimalsProfile() {
 
+
+
+
+function AnimalsProfile() {
+    useEffect(() => {
+        document.body.style.backgroundImage = "url('https://currumbinvetservices.com.au/wp-content/uploads/2023/02/budgerigars.jpg.webp')";
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+    }, []);
 
     const { id } = useParams();
     console.log(id);

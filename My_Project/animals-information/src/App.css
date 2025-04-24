@@ -1,13 +1,26 @@
+/* body {
+  background-image: url("https://tapetuj.pl/userdata/public/gfx/8810/Fototapeta-dziecieca-Walltastic-Zwierzeta-w-lesie.jpg");
+  background-repeat: no-repeat;
+  
+  background-size: cover;
+  
+  background-position: center;
+  
+  background-attachment: fixed;
+ 
+
+  margin: 30px;
+  } */
+
+
+
+
 .AnimalCardContainer {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-}
 
-.AnimalCardContainer {
-  background-color: bisque;
 }
-
 
 
 
